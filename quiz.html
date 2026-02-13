@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Tyme Boxed for me? — Find out in 60 seconds</title>
+    <meta name="description"
+        content="Take a quick interactive quiz to discover if Tyme Boxed can help you reclaim your time, focus, and intention.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬛</text></svg>">
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo"><img src="B1.png" alt="Tyme Boxed"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="science.html">The Science</a></li>
+                <li><a href="quiz.html" class="active">Is Tyme Boxed for me?</a></li>
+            </ul>
+            <a href="index.html#pricing" class="nav-cta">
+                Pre-order now
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                </svg>
+            </a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== QUIZ PAGE ========== -->
+    <div class="quiz-page">
+        <div class="quiz-container">
+
+            <!-- Progress Bar -->
+            <div class="quiz-progress" id="quizProgress">
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="quizProgressFill" style="width: 0%"></div>
+                </div>
+                <span class="quiz-progress-text" id="quizProgressText">0/4 questions answered</span>
+            </div>
+
+            <!-- Slide Viewport -->
+            <div class="quiz-slider" id="quizSlider">
+
+                <!-- ===== Q1: Primary Goal ===== -->
+                <div class="quiz-slide active" id="quizStep1" data-step="1">
+                    <h2>What is your primary goal?</h2>
+                    <p class="quiz-subtitle">Select the one that resonates most</p>
+
+                    <div class="quiz-options" data-multi="false">
+                        <div class="quiz-option" data-value="productivity" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Boosting productivity</span>
+                        </div>
+                        <div class="quiz-option" data-value="attention" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Strengthening attention span</span>
+                        </div>
+                        <div class="quiz-option" data-value="burnout" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Reducing burnout</span>
+                        </div>
+                        <div class="quiz-option" data-value="motivation" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Increasing motivation</span>
+                        </div>
+                        <div class="quiz-option" data-value="sleep" data-points="0">
+                            <div class="quiz-radio"></div>
+                            <span>Enhancing sleep quality</span>
+                        </div>
+                    </div>
+
+                    <button class="quiz-next" id="quizNext1">Next</button>
+                </div>
+
+
+                <!-- ===== Q2: Past Attempts ===== -->
+                <div class="quiz-slide" id="quizStep2" data-step="2">
+                    <h2>Which of the following have you<br>tried for screen time reduction?</h2>
+                    <p class="quiz-subtitle">Select all that apply</p>
+
+                    <div class="quiz-options" data-multi="true">
+                        <div class="quiz-option" data-value="screenlimits" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Screen Time limits</span>
+                        </div>
+                        <div class="quiz-option" data-value="deleting" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Deleting apps</span>
+                        </div>
+                        <div class="quiz-option" data-value="grayscale" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Grayscale mode</span>
+                        </div>
+                        <div class="quiz-option" data-value="willpower" data-points="0">
+                            <div class="quiz-checkbox"></div>
+                            <span>Willpower alone</span>
+                        </div>
+                    </div>
+
+                    <button class="quiz-next" id="quizNext2">Next</button>
+                </div>
+
+
+                <!-- ===== Q3: The Dopamine Itch (SCORED) ===== -->
+                <div class="quiz-slide" id="quizStep3" data-step="3">
+                    <h2>How long can you focus before<br>feeling the urge to check your phone?</h2>
+                    <p class="quiz-subtitle">Be honest — no one's watching</p>
+
+                    <div class="quiz-options" data-multi="false">
+                        <div class="quiz-option" data-value="under5" data-points="25">
+                            <div class="quiz-radio"></div>
+                            <span>Less than 5 minutes</span>
+                        </div>
+                        <div class="quiz-option" data-value="5to15" data-points="15">
+                            <div class="quiz-radio"></div>
+                            <span>5 – 15 minutes</span>
+                        </div>
+                        <div class="quiz-option" data-value="15to30" data-points="10">
+                            <div class="quiz-radio"></div>
+                            <span>15 – 30 minutes</span>
+                        </div>
+                        <div class="quiz-option" data-value="over30" data-points="5">
+                            <div class="quiz-radio"></div>
+                            <span>30+ minutes</span>
+                        </div>
+                    </div>
+
+                    <button class="quiz-next" id="quizNext3">Next</button>
+                </div>
+
+
+                <!-- ===== Q4: PFC Control (SCORED) ===== -->
+                <div class="quiz-slide" id="quizStep4" data-step="4">
+                    <h2>How often do you<br>"Ignore Limit" on your phone apps?</h2>
+                    <p class="quiz-subtitle">That little button that undoes all your good intentions</p>
+
+                    <div class="quiz-options" data-multi="false">
+                        <div class="quiz-option" data-value="daily" data-points="25">
+                            <div class="quiz-radio"></div>
+                            <span>Daily — it's basically muscle memory</span>
+                        </div>
+                        <div class="quiz-option" data-value="fewweek" data-points="15">
+                            <div class="quiz-radio"></div>
+                            <span>A few times a week</span>
+                        </div>
+                        <div class="quiz-option" data-value="rarely" data-points="5">
+                            <div class="quiz-radio"></div>
+                            <span>Rarely</span>
+                        </div>
+                    </div>
+
+                    <button class="quiz-next" id="quizNext4">See your results</button>
+                </div>
+
+            </div><!-- /quiz-slider -->
+
+
+            <!-- ===== SCIENCE TRANSITION ===== -->
+            <div class="quiz-transition" id="quizTransition">
+                <div class="quiz-transition-inner">
+                    <div class="quiz-transition-icon">🧠</div>
+                    <h3>Analyzing your PFC profile…</h3>
+                    <p>Modern life overloads the brain's control center, the <strong>Prefrontal Cortex (PFC)</strong>.
+                        It governs focus, decision-making, and impulse control.</p>
+                    <p>Tyme Boxed uses <strong>friction-based recovery</strong> to strengthen the PFC, helping you
+                        transition from a <em>"High-Reactive"</em> state to <em>"Deep Flow."</em></p>
+                    <div class="quiz-transition-loader">
+                        <div class="quiz-transition-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ===== RESULT PAGE ===== -->
+            <div class="quiz-result" id="quizResult">
+
+                <div class="quiz-result-split">
+                    <div class="quiz-result-left">
+                        <span class="section-label" id="resultLabel">YOUR RESULT</span>
+                        <h2 id="resultHeadline">Tyme Boxed is a strong fit for you.</h2>
+                        <p id="resultSubtext">Based on your answers, your Prefrontal Cortex is in a high-reactive state
+                            — constantly overloaded by micro-decisions and dopamine-driven interruptions. Tyme Boxed was
+                            built for exactly this.</p>
+
+                        <!-- Stats — Mave-style horizontal rows -->
+                        <h3 class="result-stats-heading">Results after 4 weeks with Tyme Boxed:</h3>
+                        <div class="quiz-result-stats" id="resultStats">
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Mood</div>
+                                <div class="result-stat-pct" data-stat="mood">+77%</div>
+                            </div>
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Focus</div>
+                                <div class="result-stat-pct" data-stat="focus">+75%</div>
+                            </div>
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Sleep</div>
+                                <div class="result-stat-pct" data-stat="sleep">+70%</div>
+                            </div>
+                            <div class="result-stat-card">
+                                <span class="result-stat-chevron">›</span>
+                                <div class="result-stat-label">Productivity</div>
+                                <div class="result-stat-pct" data-stat="productivity">+63%</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="quiz-result-cta">
+                            <div class="quiz-email-form">
+                                <p>Get early access at ₹999 (50% off launch price):</p>
+                                <input type="email" class="quiz-email-input" placeholder="Your email address"
+                                    id="quizEmail">
+                                <button class="quiz-email-submit" id="quizEmailSubmit">Get Early Access</button>
+                            </div>
+
+                            <button class="quiz-retake" id="quizRetake">↻ Re-take Quiz</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-result-right">
+                        <img src="results-lifestyle.png" alt="Peaceful lifestyle — digital wellness">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="index.html" class="footer-logo"><img src="B1.png" alt="Tyme Boxed"></a>
+                <nav class="footer-nav">
+                    <div class="footer-nav-group">
+                        <span class="footer-nav-label">Product</span>
+                        <ul class="footer-links">
+                            <li><a href="science.html">The Science</a></li>
+                            <li><a href="quiz.html">Is Tyme Boxed for me?</a></li>
+                            <li><a href="index.html#how-it-works">How It Works</a></li>
+                            <li><a href="index.html#pricing">Pricing</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-group">
+                        <span class="footer-nav-label">Legal</span>
+                        <ul class="footer-links">
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Tyme Boxed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
