@@ -171,7 +171,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: var(--space-md) 0;
+  padding: var(--space-sm) 0;
   transition: all var(--duration-normal) var(--ease-smooth);
 }
 
@@ -186,7 +186,7 @@ p {
   background: rgba(245, 240, 235, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: var(--space-sm) 0;
+  padding: var(--space-xs) 0;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -197,7 +197,7 @@ p {
 }
 
 .nav-logo img {
-  height: 90px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -206,14 +206,14 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .nav-links li a {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-primary);
   opacity: 0.5;
@@ -230,13 +230,13 @@ p {
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   background: var(--accent-gold-light);
   color: var(--text-primary) !important;
   opacity: 1 !important;
-  padding: 0.6rem 1.2rem;
+  padding: 0.45rem 1rem;
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   transition: background var(--duration-fast) var(--ease-smooth), transform var(--duration-fast) var(--ease-smooth);
   white-space: nowrap;
@@ -249,8 +249,8 @@ p {
 }
 
 .nav-cta svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 /* Hamburger */
@@ -354,7 +354,7 @@ p {
    HERO SECTION
    =========================== */
 .hero {
-  padding: calc(var(--space-lg) + 72px) 0 var(--space-3xl);
+  padding: calc(var(--space-lg) + 72px) 0 var(--space-xl);
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -446,7 +446,7 @@ p {
    PROBLEM — SCROLL NARRATIVE
    =========================== */
 .problem {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-sm) 0 var(--space-xs);
 }
 
 .problem-slide {
@@ -455,7 +455,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-xs) var(--space-sm);
 }
 
 .problem-slide h2 {
@@ -1411,6 +1411,85 @@ blockquote {
   text-decoration: underline;
 }
 
+/* Additional resources - Mave-style cards */
+.science-additional-resources {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border-light);
+}
+
+.science-additional-resources h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 400;
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.science-resources-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md) !important;
+}
+
+.science-resources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.science-resource-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: #F7F4EC;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  transition: background var(--duration-fast) var(--ease-smooth);
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.science-resource-card:hover {
+  background: #F0EBE2;
+}
+
+.science-resource-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.science-resource-icon svg {
+  display: block;
+}
+
+.science-resource-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-width: 0;
+  font-weight: 400;
+}
+
+.science-resource-arrow {
+  flex-shrink: 0;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.science-resource-arrow svg {
+  display: block;
+}
+
 /* Science CTA at bottom */
 /* Science Videos - Also Watch */
 .science-videos-section {
@@ -1418,6 +1497,10 @@ blockquote {
   margin: 0 auto;
   padding: 0 var(--space-lg);
   margin-top: var(--space-2xl);
+}
+
+.science-videos-inline {
+  margin-top: var(--space-xl);
 }
 
 .science-videos-heading {
@@ -1471,7 +1554,7 @@ blockquote {
 .science-video-play svg {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .science-video-title {
