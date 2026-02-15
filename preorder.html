@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-order-Tyme Boxed</title>
+  <meta name="description"
+    content="Pre-order Tyme Boxed at Early Bird price. A physical device that creates real friction between you and infinite scroll. Pay once, use forever.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="B11.png">
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="B1.png" alt="Tyme Boxed"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="science.html">The Science</a></li>
+        <li><a href="quiz.html">Is Tyme Boxed for me?</a></li>
+      </ul>
+      <a href="preorder.html" class="nav-cta">
+        Pre-order now
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7" />
+          <polyline points="7 7 17 7 17 17" />
+        </svg>
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== PRE-ORDER PAGE ========== -->
+  <main class="preorder-page" id="preorderSection">
+    <div class="preorder-viewport">
+      <div class="preorder-scroll-content" id="preorderScrollContent">
+    <div class="preorder-container">
+      <div class="preorder-card">
+        <!-- Left: Product Images — big image with thumbnails overlaid -->
+        <div class="preorder-gallery">
+          <div class="preorder-main-image">
+            <img id="preorderMainImg" src="main.jpeg" alt="Tyme Boxed — your physical barrier from infinite scroll">
+            <div class="preorder-thumbnails">
+              <button type="button" class="preorder-thumb active" data-img="main.jpeg" aria-label="View main product image">
+                <img src="main.jpeg" alt="">
+              </button>
+              <button type="button" class="preorder-thumb" data-img="intro.png" aria-label="View product intro">
+                <img src="intro.png" alt="">
+              </button>
+              <button type="button" class="preorder-thumb" data-img="device.png" aria-label="View device">
+                <img src="device.png" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product Info & Pre-order Form -->
+        <div class="preorder-info">
+          <h1 class="preorder-title">Tyme Boxed + App</h1>
+          <p class="preorder-desc">Tyme Boxed uses physical friction to create a real barrier between you and infinite scroll. Tap to block, tap to unblock-so your brain gets the pause it needs to choose consciously. No subscriptions. No side effects.</p>
+          <!-- Active Batch -->
+          <div class="preorder-batch-block preorder-batch-active">
+            <div class="preorder-batch-header">
+              <span class="preorder-batch-name">Early Bird (Limited Units)</span>
+              <span class="preorder-ship">Ships Q2 '26</span>
+            </div>
+            <div class="preorder-price-row">
+              <span class="preorder-price-original">₹1,999</span>
+              <span class="preorder-price-current">₹999</span>
+              <span class="preorder-badge">Launch Price</span>
+            </div>
+            <p class="preorder-no-sub">No subscription required</p>
+            <h3 class="preorder-form-headline">Secure your device at launch price</h3>
+            <form class="preorder-form" id="preorderForm">
+              <input type="email" name="email" class="preorder-input" placeholder="Email Address *" required>
+              <button type="submit" class="btn-preorder-black">Pre-order now</button>
+            </form>
+            <div class="preorder-assurances">
+            </div>
+          </div>
+
+          <!-- Trust / Backed by Science -->
+          <div class="preorder-trust-block">
+            <span class="preorder-trust-icon">◆</span>
+            <div>
+              <h4 class="preorder-trust-title">Backed by science</h4>
+              <p>Physical friction beats willpower-proven by behavioral research. Hundreds of early users share Tyme Boxed for focus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Checkout Modal Popup -->
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+    <div class="checkout-modal-panel">
+      <!-- Step 1: Checkout form -->
+      <div class="checkout-step is-active" id="checkoutStepForm">
+        <div class="checkout-modal-header">
+          <h2 class="checkout-modal-title"><span class="checkout-brand">Tyme Boxed</span> Checkout</h2>
+          <button type="button" class="checkout-modal-close" id="checkoutModalClose" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <form class="checkout-form" id="checkoutForm">
+          <div class="checkout-section">
+            <h3 class="checkout-section-title">Contact details</h3>
+            <div class="checkout-field-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" id="checkoutEmail" placeholder="Enter email" required>
+            </div>
+            <div class="checkout-field-row">
+              <div class="checkout-field-group">
+                <label>First name *</label>
+                <input type="text" name="firstName" placeholder="Enter first name" required>
+              </div>
+              <div class="checkout-field-group">
+                <label>Last name *</label>
+                <input type="text" name="lastName" placeholder="Enter last name" required>
+              </div>
+            </div>
+            <div class="checkout-field-group">
+              <label>Contact number *</label>
+              <div class="checkout-phone-row">
+                <input type="text" name="countryCode" value="+91" class="checkout-phone-code" readonly>
+                <input type="tel" name="phone" placeholder="Enter number" required>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-section">
+            <h3 class="checkout-section-title">Address details</h3>
+            <div class="checkout-field-group">
+              <label>Address line 1 *</label>
+              <input type="text" name="address1" placeholder="Enter line 1" required>
+            </div>
+            <div class="checkout-field-group">
+              <label>Address line 2</label>
+              <input type="text" name="address2" placeholder="Enter line 2 (optional)">
+            </div>
+            <div class="checkout-field-row">
+              <div class="checkout-field-group">
+                <label>City *</label>
+                <input type="text" name="city" placeholder="Enter city" required>
+              </div>
+              <div class="checkout-field-group">
+                <label>State *</label>
+                <input type="text" name="state" placeholder="Enter state" required>
+              </div>
+            </div>
+            <div class="checkout-field-group">
+              <label>Pin Code *</label>
+              <input type="text" name="pincode" placeholder="Enter pin code" required>
+            </div>
+          </div>
+          <div class="checkout-section">
+            <h3 class="checkout-section-title">Coupon code (if any)</h3>
+            <div class="checkout-coupon-row">
+              <input type="text" name="coupon" placeholder="Gift card or discount code">
+              <button type="button" class="checkout-apply-btn">Apply</button>
+            </div>
+          </div>
+        </form>
+        <div class="checkout-modal-footer">
+          <div class="checkout-total">
+            <span class="checkout-total-label">Total</span>
+            <span class="checkout-total-amount">₹999.00</span>
+          </div>
+          <button type="button" class="btn-checkout-continue" id="btnContinuePayment">Continue to payment</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment (COD only) -->
+      <div class="checkout-step checkout-step-payment" id="checkoutStepPayment">
+        <div class="checkout-modal-header">
+          <h2 class="checkout-modal-title"><span class="checkout-brand">Tyme Boxed</span> Checkout</h2>
+          <button type="button" class="checkout-modal-close" id="checkoutModalClose2" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="checkout-payment-body">
+          <h3 class="checkout-section-title">Select payment method</h3>
+          <label class="checkout-payment-option checkout-payment-cod">
+            <input type="radio" name="payment" value="cod" checked>
+            <span class="checkout-payment-radio"></span>
+            <span class="checkout-payment-label">
+              <strong>Cash on Delivery (COD)</strong>
+              <small>Pay when your order is delivered</small>
+            </span>
+          </label>
+        </div>
+        <div class="checkout-modal-footer">
+          <div class="checkout-total">
+            <span class="checkout-total-label">Total</span>
+            <span class="checkout-total-amount">₹999.00</span>
+          </div>
+          <button type="button" class="btn-checkout-continue" id="btnConfirmOrder">Confirm Order</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Order confirmed -->
+      <div class="checkout-step checkout-step-confirm" id="checkoutStepConfirm">
+        <div class="checkout-confirm-body">
+          <div class="checkout-confirm-icon">✓</div>
+          <h2 class="checkout-confirm-title">Your order is confirmed!</h2>
+          <p class="checkout-confirm-msg">Thank you for your order. A confirmation email has been sent to <strong id="confirmEmailDisplay"></strong></p>
+          <p class="checkout-confirm-note">We'll deliver your Tyme Boxed to your address. Pay ₹999 when the order arrives.</p>
+          <button type="button" class="btn-checkout-continue" id="btnCloseAfterConfirm">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="footer-logo"><img src="B1.png" alt="Tyme Boxed"></a>
+        <nav class="footer-nav">
+          <div class="footer-nav-group">
+            <span class="footer-nav-label">Product</span>
+            <ul class="footer-links">
+              <li><a href="science.html">The Science</a></li>
+              <li><a href="quiz.html">Is Tyme Boxed for me?</a></li>
+              <li><a href="index.html#how-it-works">How It Works</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <span class="footer-nav-label">Legal</span>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Tyme Boxed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Thumbnail gallery
+    document.querySelectorAll('.preorder-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        document.querySelectorAll('.preorder-thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        const img = thumb.dataset.img;
+        document.getElementById('preorderMainImg').src = img;
+      });
+    });
+
+    // Pre-order form — open checkout modal with email
+    const preorderForm = document.getElementById('preorderForm');
+    const checkoutModal = document.getElementById('checkoutModal');
+    const checkoutEmail = document.getElementById('checkoutEmail');
+    const checkoutModalClose = document.getElementById('checkoutModalClose');
+    const checkoutModalOverlay = document.getElementById('checkoutModalOverlay');
+
+    preorderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.email.value.trim();
+      if (email && email.includes('@')) {
+        checkoutEmail.value = email;
+        checkoutModal.classList.add('is-open');
+        checkoutModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+
+    function closeCheckoutModal() {
+      checkoutModal.classList.remove('is-open');
+      checkoutModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      showCheckoutStep('checkoutStepForm');
+    }
+
+    function showCheckoutStep(stepId) {
+      document.querySelectorAll('.checkout-step').forEach(s => s.classList.remove('is-active'));
+      const step = document.getElementById(stepId);
+      if (step) step.classList.add('is-active');
+    }
+
+    document.getElementById('btnContinuePayment').addEventListener('click', (e) => {
+      e.preventDefault();
+      const form = document.getElementById('checkoutForm');
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      showCheckoutStep('checkoutStepPayment');
+    });
+
+    document.getElementById('btnConfirmOrder').addEventListener('click', async () => {
+      const form = document.getElementById('checkoutForm');
+      const formData = new FormData(form);
+      const orderData = {
+        email: formData.get('email'),
+        firstName: formData.get('firstName'),
+        lastName: formData.get('lastName'),
+        phone: (formData.get('countryCode') || '') + ' ' + (formData.get('phone') || ''),
+        address: formData.get('address1') + (formData.get('address2') ? ', ' + formData.get('address2') : ''),
+        city: formData.get('city'),
+        state: formData.get('state'),
+        pincode: formData.get('pincode'),
+        total: '₹999',
+        paymentMethod: 'Cash on Delivery'
+      };
+
+      document.getElementById('confirmEmailDisplay').textContent = orderData.email;
+      showCheckoutStep('checkoutStepConfirm');
+
+      // Send confirmation email via EmailJS
+      const EMAILJS_PUBLIC_KEY = '3E_zt7defuqWBT-cr';
+      const EMAILJS_SERVICE_ID = 'service_o3nsgzc';
+      const EMAILJS_TEMPLATE_ID = 'template_gl8m4xk';
+
+      // Template expects: order_id, orders[], cost{}, email, logo_url, website_url
+      const SITE_URL = window.location.origin; // Override with 'https://yoursite.com' for production if needed
+      const orderId = 'TB-' + Date.now().toString(36).toUpperCase();
+      const templateParams = {
+        email: orderData.email,
+        order_id: orderId,
+        logo_url: SITE_URL + '/B1.png',
+        website_url: SITE_URL,
+        orders: [
+          {
+            name: 'Tyme Boxed',
+            image_url: SITE_URL + '/main.jpeg',
+            units: 1,
+            price: '999'
+          }
+        ],
+        cost: {
+          shipping: '0',
+          tax: '0',
+          total: '999'
+        }
+      };
+
+      if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID) {
+        try {
+          emailjs.init(EMAILJS_PUBLIC_KEY);
+          await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+          // Success - remove any previous error message
+          const errEl = document.getElementById('emailSendError');
+          if (errEl) errEl.remove();
+        } catch (err) {
+          const errMsg = err?.text || err?.message || (err?.response?.text || '') || JSON.stringify(err);
+          console.error('EmailJS send failed (422 = template variable mismatch):', errMsg, err);
+          let errEl = document.getElementById('emailSendError');
+          if (!errEl) {
+            errEl = document.createElement('p');
+            errEl.id = 'emailSendError';
+            errEl.className = 'checkout-confirm-note';
+            errEl.style.color = 'var(--error, #c53030)';
+            errEl.style.marginTop = '0.5rem';
+            document.querySelector('.checkout-confirm-body').appendChild(errEl);
+          }
+          errEl.textContent = 'Could not send confirmation email. Check console for details.';
+          errEl.title = errMsg;
+        }
+      }
+    });
+
+    document.getElementById('btnCloseAfterConfirm').addEventListener('click', closeCheckoutModal);
+
+    if (checkoutModalClose) checkoutModalClose.addEventListener('click', closeCheckoutModal);
+    document.getElementById('checkoutModalClose2').addEventListener('click', closeCheckoutModal);
+    if (checkoutModalOverlay) checkoutModalOverlay.addEventListener('click', closeCheckoutModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && checkoutModal.classList.contains('is-open')) closeCheckoutModal();
+    });
+
+    // GSAP: Pin preorder section, inner content scrolls with page scroll
+    gsap.registerPlugin(ScrollTrigger);
+
+    const section = document.getElementById('preorderSection');
+    const scrollContent = document.getElementById('preorderScrollContent');
+    if (section && scrollContent) {
+      const viewport = section.querySelector('.preorder-viewport');
+      const contentHeight = scrollContent.scrollHeight;
+      const viewportHeight = viewport ? viewport.clientHeight : window.innerHeight - 80;
+      const scrollDistance = Math.max(0, contentHeight - viewportHeight);
+
+      if (scrollDistance > 50) {
+        gsap.to(scrollContent, {
+          y: -scrollDistance,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: `+=${scrollDistance}`,
+            pin: true,
+            scrub: 1
+          }
+        });
+
+        window.addEventListener('resize', () => ScrollTrigger.refresh());
+        setTimeout(() => ScrollTrigger.refresh(), 500);
+      }
+    }
+  </script>
+</body>
+
+</html>
