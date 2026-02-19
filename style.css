@@ -1281,6 +1281,69 @@ blockquote {
   color: var(--text-primary);
 }
 
+/* Support page — aligned with legal pages, gold accent for warmth */
+.support-highlight {
+  background: var(--accent-gold-bg);
+  border-left: 4px solid var(--accent-gold);
+  padding: var(--space-lg);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.support-email-row {
+  margin-top: var(--space-sm);
+}
+
+.support-link {
+  color: var(--accent-gold);
+  font-weight: 500;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.support-link:hover {
+  color: var(--accent-gold-hover);
+}
+
+.support-response-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.support-topic {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.support-topic:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.support-topic h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.support-links-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em;
+  align-items: baseline;
+}
+
+.support-links-list a {
+  color: var(--accent-gold);
+  font-weight: 500;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.support-links-list a:hover {
+  color: var(--accent-gold-hover);
+}
+
 
 /* ===========================
    SCIENCE PAGE — Sticky Sidebar
